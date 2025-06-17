@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+    printf("salom dunyo");
+    return 0;
+}
+
+1. #include <stdio.h>
+Bu preprocessor direktivasi bo‘lib, kompilyatsiyadan oldin bajariladi.
+
+stdio.h — standard input-output header (standart kirish-chiqish kutubxonasi).
+
+Unda printf kabi konsolga ma’lumot chiqaruvchi yoki konsoldan ma’lumot qabul qiluvchi funksiyalar e’lon qilingan.
+
+Ya’ni, bu qatorda siz dasturni standart kirish-chiqish funksiyalaridan foydalanishga tayyorlaysiz.
+
+2. int main()
+main funksiyasi — bu har qanday C dasturining boshlanish nuqtasi.
+
+Dastur ishga tushganda, avvalo bu funksiya bajariladi.
+
+int — funksiyaning qaytaradigan qiymati (integer, butun son). Bu yerda main dastur tugagach, tizimga 0 yoki boshqa kodni qaytaradi.
+
+Tizimda 0 qaytarish — dastur muvaffaqiyatli tugadi degani.
+
+3. { ... } — funksiya tanasi
+Qavslar ichida main funksiyasining bajariladigan kodi yoziladi.
+
+Bu yerda bajariladigan barcha kod shu qavslar ichida bo‘ladi.
+
+4. printf("salom dunyo");
+Bu standart kutubxonadan olingan funksiya bo‘lib, ekranga matn chiqaradi.
+
+"salom dunyo" — chiqariladigan matn (string).
+
+Matnning oxirida nuqta-vergul (;) bor, bu C tilida buyruq oxiri belgisi.
+
+Natijada, kompyuter ekranda salom dunyo so‘zlarini ko‘rsatadi.
+
+5. return 0;
+main funksiyasidan 0 qiymatini qaytarish dastur muvaffaqiyatli yakunlandi degan signal hisoblanadi.
+
+Bu tizim yoki operatsion tizimga xabar bo‘lib xizmat qiladi.
+
+Agar return yozilmasa ham ba’zi kompilyatorlarda dastur 0 qaytaradi, lekin uni aniq ko‘rsatish yaxshi odat.
+
+Umumiy tushuncha:
+Sizning kodingiz — eng oddiy C dasturi.
+
+U ekranga "salom dunyo" yozuvini chiqaradi.
+
+#include <stdio.h> — kutubxonani ulaydi.
+
+main() — dastur boshlanadigan joy.
+
+printf — ekranga yozish funksiyasi.
+
+return 0 — dastur muvaffaqiyatli tugadi degan ma’no.
+

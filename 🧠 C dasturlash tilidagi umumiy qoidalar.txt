@@ -1,0 +1,61 @@
+C dastur yozishning umumiy va qat’iy qoidalari (izohlar bilan)
+1. Kutubxonalarni ulash
+c
+Copy code
+#include <stdio.h>   // Kerakli kutubxonani ulash. Masalan, printf uchun stdio.h
+2. Dastur doimo main() funksiyasidan boshlanadi
+c
+Copy code
+int main() {        // Dastur ishga tushadigan asosiy funksiya
+3. Har bir buyruq ; bilan tugaydi
+c
+Copy code
+printf("Salom, dunyo!\n");   // Matnni ekranga chiqarish, oxirida nuqta-vergul bo‘lishi shart
+4. Matn har doim qo‘sh tirnoq " " ichida yoziladi
+c
+Copy code
+printf("Matn shu yerda");    // Matn qo‘sh tirnoq ichida bo‘ladi
+5. Qavslar to‘g‘ri ochilishi va yopilishi shart
+c
+Copy code
+int main() {                // Ochilgan qavsdan keyin blok boshlanadi
+    // kodlar
+}                           // Qavs yopilishi shart
+6. O‘zgaruvchilar ishlatilishidan oldin e’lon qilinadi
+c
+Copy code
+int yosh = 20;               // O‘zgaruvchi e’lon qilinadi va qiymat berilishi mumkin
+7. C tili katta-kichik harflarni farqlaydi
+c
+Copy code
+int Son = 5;
+int son = 10;              // Bu ikki o‘zgaruvchi turlicha hisoblanadi
+8. return 0; orqali dastur muvaffaqiyatli tugashi bildiriladi
+c
+Copy code
+return 0;                  // Dastur yakunlandi
+9. Izoh yozish qoidalari
+Bir qatorli izoh uchun // ishlatiladi:
+
+c
+Copy code
+// Bu bir qatorli izoh
+Ko‘p qatorli izoh uchun /* ... */ ishlatiladi:
+
+c
+Copy code
+/*
+  Bu
+  ko‘p qatorli
+  izohdir
+*/
+10. Misol: To‘liq kichik C dasturi izohlar bilan
+c
+Copy code
+#include <stdio.h>  // printf funksiyasi uchun kutubxona
+
+int main() {        // Asosiy funksiya boshlanishi
+    // Ekranga salom yozamiz
+    printf("Salom, dunyo!\n");  // Matn chiqarish
+    return 0;                   // Dastur muvaffaqiyatli tugadi
+}                              // main funksiyasi tugashi

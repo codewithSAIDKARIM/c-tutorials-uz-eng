@@ -1,0 +1,76 @@
+# LESSON 2: VARIABLES (o'zgaruvchilar)
+
+Bu darsda biz C dasturlash tilida ishlatiladigan **asosiy o'zgaruvchi turlari** bilan tanishamiz:
+
+C dasturida o'zgaruvchi bu — **ma'lumot saqlovchi idish**, u RAM (xotira) ichida joy egallaydi va unga qiymat berish, o'qish, o'zgartirish mumkin.
+
+---
+
+1. **int** (integer)  
+   Butun sonlarni saqlaydi: 1, 100, -5, 0  
+   - Misol: `int age = 18;`  
+   - Chiqarish: `printf("Age: %d\n", age);`  
+   - Format specifier: `%d`
+
+---
+
+2. **float** (floating point)  
+   Kasrli sonlar uchun, lekin unchalik aniqlikda emas.  
+   - Misol: `float height = 1.85;`  
+   - Chiqarish: `printf("Height: %.2f\n", height);`  
+   - Format specifier: `%f`
+
+---
+
+3. **double** (double precision floating point)  
+   Katta va aniqroq kasrli sonlar uchun.  
+   - Misol: `double balance = 30000000.00;`  
+   - Chiqarish: `printf("Balance: %.2lf\n", balance);`  
+   - Format specifier: `%lf`
+
+---
+
+4. **char** (character)  
+   Bitta belgini saqlaydi. Harf, raqam, yoki belgi bo'lishi mumkin.  
+   - Misol: `char grade = 'A';`  
+   - Chiqarish: `printf("Grade: %c\n", grade);`  
+   - Format specifier: `%c`
+
+---
+
+5. **bool** (boolean)  
+   True (1) yoki False (0) qiymatlarni saqlaydi.  
+   C tilida bu `<stdbool.h>` kutubxonasidan olinadi.  
+   - Misol: `bool isStudent = true;`  
+   - Chiqarish: `printf("Is Student: %s\n", isStudent ? "Yes" : "No");`
+
+---
+
+## Umumiy qoida:
+- Har bir o'zgaruvchi **avval e'lon qilinadi**, keyin unga qiymat beriladi.
+- Dasturda o'zgaruvchilarni ishlatishdan oldin ular mavjud bo'lishi kerak.
+- Har bir qatordan keyin `;` qo‘yish shart.
+
+---
+
+## Kod misoli (overal.c faylidan):
+
+```c
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    char name[] = "saidkarim";
+    int age = 18;
+    float height = 1.85;
+    double balance = 30000000.00;
+    bool isStudent = true;
+
+    printf("Name       : %s\n", name);
+    printf("Age        : %d\n", age);
+    printf("Height     : %.2f meters\n", height);
+    printf("Balance    : $%.2lf\n", balance);
+    printf("Is Student : %s\n", isStudent ? "Yes" : "No");
+
+    return 0;
+}
