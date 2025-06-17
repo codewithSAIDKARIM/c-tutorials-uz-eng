@@ -2,7 +2,7 @@
 
 Welcome to my beginner-friendly C programming tutorial repository!
 
-Here, I document each lesson with practical examples and explanations.
+I document each lesson with practical examples and explanations.
 
 ---
 
