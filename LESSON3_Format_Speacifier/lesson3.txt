@@ -1,0 +1,79 @@
+📘 DARS 3: FORMAT SPECIFIER — FORMAT BELGILARI
+📌 Kirish:
+Dasturda ma’lumot chiqarish juda muhim. C tilida bu ishni printf() funksiyasi bajaradi. Lekin printf() turli xil ma’lumot turlarini (butun son, belgilar, matn, o‘nlik son) chiqarishda formatlash belgisi deb ataluvchi format specifierlardan foydalanadi.
+
+Bu belgilar kompyuterga — “men bu o‘zgaruvchining qanday turga tegishli ekanligini va uni qanday formatda chiqarish kerakligini ko‘rsatmoqchiman” — degan signal beradi.
+
+🔎 Format Specifier nima?
+Format specifier — bu % belgisidan boshlanadigan maxsus belgilar bo‘lib, ular printf() funksiyasiga chiqarilayotgan o‘zgaruvchining turini bildiradi.
+
+Har bir ma’lumot turi uchun o‘ziga xos format mavjud.
+
+🧩 Asosiy Format Specifierlar
+Format	Tavsifi	Ma’lumot turi	Misol chiqishi
+%d	Butun son (integer)	int	Age: 18
+%f	O‘nlik son	float	Height: 1.75
+%.2f	Kasrdan keyin 2 raqam bilan	float/double	Height: 1.75
+%lf	Katta aniqlikdagi o‘nlik son	double	Balance: 23000.00
+%c	Bitta belgi	char	Grade: A
+%s	So‘z yoki matn (string)	char[]	Name: Saidkarim
+%u	Musbat butun son (unsigned)	unsigned int	Value: 300
+
+Eslatma: C tilida bool turi uchun alohida format belgisi yo‘q. bool qiymatlarni true/false emas, 1/0 shaklida chiqaradi. Shuning uchun ternary operator (?:) orqali Yes/No tarzida yozish kerak:
+printf("%s", isStudent ? "Yes" : "No");
+
+
+
+⚙️ Formatlashning ixtiyoriy xususiyatlari:
+.2f → bu .2 — bu raqamdan keyin nechta kasr soni chiqishini bildiradi. Masalan: %.2f → 1.75
+
+\n → bu yangi qatordan yozishni bildiradi. Ekranda matn keyingi qatorga tushadi.
+
+' ' → matnlar " " ichida yoziladi.
+%10d — bu format raqamni 10 belgidan iborat joyga joylaydi (o‘ngdan joylashtiradi).
+printf("%10d\n", 42);    //      42  (10 belgilik joyda)
+rintf("%-10d\n", 42);   // 42       (chapdan joylash)
+
+🧠 Qo‘shimcha ma’lumotlar:
+\n → yangi qatordan yozishni bildiradi.
+
+\t → tab (bo‘sh joy) qo‘shadi.
+
+\" → matnda qo‘shtirnoq chiqarish uchun ishlatiladi.
+
+%% → matnda % belgisini chiqaradi.
+
+🧪 Amaliy misol:
+c
+Copy code
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int age = 18;
+    float height = 1.70;
+    double balance = 23000.00;
+    char grade = 'A';
+    char name[] = "Saidkarim";
+    bool isStudent = true;
+
+    printf("AGE       : %d years\n", age);
+    printf("HEIGHT    : %.2f meters\n", height);
+    printf("BALANCE   : %.2lf sums\n", balance);
+    printf("GRADE     : %c\n", grade);
+    printf("NAME      : %s\n", name);
+    printf("IS STUDENT: %s\n", isStudent ? "YES" : "NO");
+
+    return 0;
+}
+✅ Xulosa:
+C dasturida printf() yordamida ma’lumot chiqarish — dasturchining asosiy vositalaridan biri. Har xil o‘zgaruvchilarni to‘g‘ri chiqarish uchun format specifierlardan to‘g‘ri va aniq foydalanish juda muhim.
+
+Bu darsda siz quyidagilarni o‘rgandingiz:
+
+Har bir o‘zgaruvchi turi uchun qanday format belgisi borligi
+
+printf() yordamida formatli chiqish qilish
+
+bool qiymatni matnga aylantirish
+
